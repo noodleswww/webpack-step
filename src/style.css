@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./test.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hello {
+    color: red;
+    background: url('./licai-ac.png') no-repeat;
+    font-family: 'MyFont';
+}
