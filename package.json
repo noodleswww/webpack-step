@@ -17,16 +17,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "rm -rf dist/ && webpack --config webpack.config.js --progress --verbose --watch",
     "start": "webpack-dev-server --open",
-    "server": "node server"
+    "server": "node server",
+    "babel": "babel src/components/test.js -o src/components/tmp.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
     "lodash": "^4.17.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-istanbul": "^4.1.4",
@@ -57,8 +60,16 @@
         "env",
         {
           "targets": {
-            "node": "current"
-          }
+            "browsers": [
+              ">1%",
+              "last 10 versions",
+              "not ie < 9"
+            ],
+            "uglify": true
+          },
+          "modules": false,
+          "useBuiltIns": true,
+          "debug": true
         }
       ],
       "stage-0",
