@@ -1,5 +1,6 @@
 
 # babel 配置说明
+[参考文档](https://leanpub.com/setting-up-es6/read)
 仅说明一些不易理解的配置使用
 
 ## Babel 6: loose 和 非loose(normal) 模式（引用自互联网blog）
